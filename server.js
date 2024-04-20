@@ -8,8 +8,6 @@ const errorHandle = require("./errorHandle");
 const successHandle = require("./successHandle");
 
 const dotenv = require("dotenv");
-const { resolveSoa } = require("dns");
-
 dotenv.config({ path: "./config.env" });
 // console.log(process.env.PORT);
 
