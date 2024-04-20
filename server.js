@@ -107,7 +107,7 @@ const requestListener = async (req, res) => {
                 // 找到這筆 id 會回傳那筆的物件內容。找不到則回傳 null
                 // console.log(idResult);
                 if (data.content !== "" && idResult !== null) {
-                    const newPost = await Post.findByIdAndUpdate(
+                    await Post.findByIdAndUpdate(
                         id,
                         {
                             name: data.name,
@@ -119,7 +119,7 @@ const requestListener = async (req, res) => {
                             likes: data.likes
                         }
                     );
-                    successHandle(res, newPost);
+                    successHandle(res, data);
                 } else {
                     const message = '查無該筆貼文內容或 id 屬性';
                     errorHandle(res, message);

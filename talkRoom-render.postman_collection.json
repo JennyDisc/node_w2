@@ -33,7 +33,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"Jack\",\r\n    \"location\":\"台北市\",\r\n    \"type\":\"group\",\r\n    \"tags\":\"迷因\",\r\n    \"content\":\"我是測試資料\",\r\n    \"image\":\"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n    \"likes\":1\r\n}",
+					"raw": "{\r\n    \"name\":\"Jack2\",\r\n    \"location\":\"台北市\",\r\n    \"type\":\"group\",\r\n    \"tags\":\"迷因\",\r\n    \"content\":\"我是測試資料\",\r\n    \"image\":\"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n    \"likes\":1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -61,7 +61,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://node-w2.onrender.com/posts/6620915308a6a944633f999c",
+					"raw": "https://node-w2.onrender.com/posts/6623527973dae798d6abf887",
 					"protocol": "https",
 					"host": [
 						"node-w2",
@@ -70,7 +70,27 @@
 					],
 					"path": [
 						"posts",
-						"6620915308a6a944633f999c"
+						"6623527973dae798d6abf887"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DEL刪除全部post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://node-w2.onrender.com/posts",
+					"protocol": "https",
+					"host": [
+						"node-w2",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts"
 					]
 				}
 			},
@@ -91,6 +111,36 @@
 					],
 					"path": [
 						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH修改指定post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"我更名\",\r\n    \"location\":\"台北市\",\r\n    \"type\":\"group\",\r\n    \"tags\":\"迷因\",\r\n    \"content\":\"我更改內容啦~\",\r\n    \"image\":\"http://dummyimage.com/197x100.png/dddddd/000000\",\r\n    \"likes\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://node-w2.onrender.com/posts/6623527973dae798d6abf887",
+					"protocol": "https",
+					"host": [
+						"node-w2",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6623527973dae798d6abf887"
 					]
 				}
 			},
