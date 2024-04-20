@@ -83,7 +83,7 @@ const requestListener = async (req, res) => {
         const id = req.url.split('/').pop();
         const idResult = await Post.findByIdAndDelete(id);
         // 找到可刪除的會回傳那筆的物件內容。找不到可刪除的則回傳 null
-        console.log(idResult);
+        // console.log(idResult);
         if (idResult !== null) {
             res.writeHead(200, headers);
             res.write(JSON.stringify({
